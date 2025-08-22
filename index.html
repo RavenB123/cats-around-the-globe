@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Around the Globe 🌍</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Mobile-first styling for small screens (up to 768px) */
+        @media (max-width: 768px) {
+
+            /* Adjustments for the header and navigation */
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 5px 0;
+            }
+
+            /* Adjustments for the intro section */
+            .intro {
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .profile-pic,
+            .globe-icon {
+                width: 100px;
+                height: 100px;
+                margin: 10px auto;
+            }
+
+            /* Stack country sections vertically */
+            .country-sections-container {
+                flex-direction: column;
+                padding: 10px;
+                align-items: center;
+            }
+
+            .country-link {
+                width: 90%;
+                margin: 10px 0;
+            }
+        }
+
+        /* Styling for medium-sized screens (tablets) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .country-sections-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .country-link {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <h1 class="logo">Cats Around the Globe <img src="ravenprofilepic/paw.png" alt="A white cat paw icon"
+                    class="paw-icon"></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="canada.html">Canada</a></li>
+                <li><a href="italy.html">Italy</a></li>
+                <li><a href="japan.html">Japan</a></li>
+                <li><a href="taiwan.html">Taiwan</a></li>
+                <li><a href="turkey.html">Turkey</a></li>
+                <li><a href="philippines.html">Philippines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="homepage-content">
+        <section class="intro">
+            <img src="ravenprofilepic/profpic.jpg" alt="A photo of me, the author." class="profile-pic">
+            <div class="welcome-message">
+                <h2>Hello, Cat Lovers!</h2>
+                <p>Welcome to Cats Around the Globe, my little passion project where I share the cats I’ve met during my
+                    travels. Each photo tells a story, and I’m thrilled to let you peek into these special moments.
+                    Thanks for stopping by, and I hope you enjoy the journey as much as I do. — Raven 🐾</p>
+            </div>
+            <img src="ravenprofilepic/globe.png" alt="A spinning globe icon" class="globe-icon">
+        </section>
+
+        <section class="country-sections-container">
+
+            <a href="canada.html" class="country-link">
+                <img src="canadacats/canadalandscape.jpg" alt="Landscape of Canada" class="landscape-img">
+                <h2 class="country-title">Canada</h2>
+            </a>
+
+            <a href="italy.html" class="country-link">
+                <img src="italycats/italylandscape.jpg" alt="Landscape of Italy" class="landscape-img">
+                <h2 class="country-title">Italy</h2>
+            </a>
+
+            <a href="japan.html" class="country-link">
+                <img src="japancats/japanlandscape.jpg" alt="Landscape of Japan" class="landscape-img">
+                <h2 class="country-title">Japan</h2>
+            </a>
+
+            <a href="taiwan.html" class="country-link">
+                <img src="taicats/tailandscape.jpg" alt="Landscape of Taiwan" class="landscape-img">
+                <h2 class="country-title">Taiwan</h2>
+            </a>
+
+            <a href="turkey.html" class="country-link">
+                <img src="turkeycats/turkballoon.jpg" alt="Landscape of Turkey" class="landscape-img">
+                <h2 class="country-title">Turkey</h2>
+            </a>
+
+            <a href="philippines.html" class="country-link">
+                <img src="philcats/phillandscape.jpg" alt="Landscape of Philippines" class="landscape-img">
+                <h2 class="country-title">Philippines</h2>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Cats Around the Globe by Raven Besharah</p>
+    </footer>
+
+</body>
+
+</html>

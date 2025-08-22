@@ -1,0 +1,388 @@
+/* Pastel Color Palette */
+:root {
+    --primary-color: #5D9C8D;
+    /* Soft teal for main text & header */
+    --accent-color: #FFC0CB;
+    /* Pastel pink for highlights */
+    --background-color: #F8F8FF;
+    /* Off-white / Ghost White */
+    --card-background: #E6E6FA;
+    /* Pastel purple / Lavender */
+}
+
+/* --- General Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* --- Header and Navigation --- */
+.main-header {
+    background-color: var(--primary-color);
+    padding: 1.5rem 2rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Paw icon styling */
+.paw-icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Homepage Styles --- */
+.homepage-content {
+    padding: 2rem;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Creates even space between items */
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message {
+    flex-grow: 1;
+}
+
+/* Spinning Globe Animation */
+.globe-icon {
+    width: 150px;
+    /* Makes the globe larger */
+    height: 150px;
+    animation: spin-reverse 30s linear infinite;
+}
+
+@keyframes spin-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.welcome-message h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-message p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.country-sections-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.country-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.landscape-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.country-link:nth-child(1) .landscape-img {
+    object-position: top 0%;
+}
+
+.country-link:nth-child(2) .landscape-img {
+    object-position: 50% 55%;
+}
+
+.country-link:hover .landscape-img {
+    transform: scale(1.1);
+}
+
+.country-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* --- Gallery Page Styles --- */
+.gallery-page {
+    padding: 2rem;
+}
+
+.country-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.country-intro h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.gallery-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: var(--card-background);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    /* Set a fixed height for all images */
+    object-fit: cover;
+    /* This makes sure the image fills the space without stretching */
+    object-position: top;
+    /* Aligns the image content to the top */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Add this to your style.css file */
+.image-description {
+    text-align: left;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    /* A slightly darker color for readability */
+}
+
+/* --- Footer --- */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-top: 3rem;
+}
+
+/* Modal/Lightbox Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+}
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mobile-first styling for small screens (up to 768px) */
+@media (max-width: 768px) {
+
+    /* Adjustments for the header and navigation */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    /* Adjustments for the country intro section */
+    .country-intro {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Adjustments for the gallery grid */
+    .gallery-grid-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .gallery-item {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Adjustments for the footer */
+    .main-footer {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* Styling for medium-sized screens (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gallery-grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+}

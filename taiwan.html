@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats in Taiwan 🇹🇼</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Mobile-first styling for small screens (up to 768px) */
+        @media (max-width: 768px) {
+
+            /* Adjustments for the header and navigation */
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 5px 0;
+            }
+
+            /* Adjustments for the country intro section */
+            .country-intro {
+                padding: 20px;
+                text-align: center;
+            }
+
+            /* Adjustments for the gallery grid */
+            .gallery-grid-container {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                align-items: center;
+            }
+
+            .gallery-item {
+                width: 100%;
+                margin: 10px 0;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            /* Adjustments for the footer */
+            .main-footer {
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        /* Styling for medium-sized screens (tablets) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .gallery-grid-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <h1 class="logo">Cats Around the Globe <img src="ravenprofilepic/paw.png" alt="A white cat paw icon"
+                    class="paw-icon"></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="canada.html">Canada</a></li>
+                <li><a href="italy.html">Italy</a></li>
+                <li><a href="japan.html">Japan</a></li>
+                <li><a href="taiwan.html">Taiwan</a></li>
+                <li><a href="turkey.html">Turkey</a></li>
+                <li><a href="philippines.html">Philippines</a></li>
+            </ul>
+        </nav>
+        <div class="spinning-globe"></div>
+    </header>
+
+    <main class="gallery-page">
+        <section class="country-intro">
+            <h2>Nǐ hǎo from the Cats of Taiwan! 🇹🇼</h2>
+            <p>Welcome to the kittys who live in Cat Village! I took the train through the mountains, on the outskirts
+                of
+                Taipei to
+                find this place. Worth it!
+            </p>
+        </section>
+
+        <section class="gallery-grid-container">
+            <div class="gallery-item">
+                <img src="taicats/catvillage.jpg" alt="A cat in Taiwan">
+                <p class="image-description">The village sits along the Keelung River outside of New Taipei City,
+                    Taiwan. After the mines closed and the
+                    town declined... hundreds of cats came to roam the village!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/catvillage2.jpg" alt="A cat in Taiwan">
+                <p class="image-description">You'll see cat themed cafes, murals, and shops all celebrating the
+                    village's
+                    furry residents.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/tai1.jpg" alt="A cat in Taiwan">
+                <p class="image-description">Purrfectly striking eyes.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/tai2.jpg" alt="A cat in Taiwan">
+                <p class="image-description">A sleepy cat lounging on a scooter.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/tai3.jpg" alt="A cat in Taiwan">
+                <p class="image-description">Snack time at Cat Village.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/tai4.jpg" alt="A cat in Taiwan">
+                <p class="image-description">What a view.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/tai5.jpg" alt="A cat in Taiwan">
+                <p class="image-description">Posing for the camera.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/tai6.jpg" alt="A cat in Taiwan">
+                <p class="image-description">Tongue out.
+                <p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/tai7.jpg" alt="A cat in Taiwan">
+                <p class="image-description">Another emerald eyed kitty.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="taicats/waterfall.jpg" alt="waterfall">
+                <p class="image-description">Along the way to the village of Houtong where Cat Village lives, I stopped
+                    at the famous Shifen Waterfall.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Cats Around the Globe by Raven Besharah</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

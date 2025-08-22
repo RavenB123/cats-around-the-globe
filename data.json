@@ -1,0 +1,32 @@
+{
+    "countries": [
+        {
+            "name": "France",
+            "folder": "france",
+            "description": "Bonjour from the feline friends of France! 🇫🇷",
+            "images": [
+                "cat1.jpg",
+                "cat2.jpg",
+                "cat3.jpg"
+            ]
+        },
+        {
+            "name": "Japan",
+            "folder": "japan",
+            "description": "Kon'nichiwa to the adorable cats of Japan! 🇯🇵",
+            "images": [
+                "cat1.jpg",
+                "cat2.jpg"
+            ]
+        },
+        {
+            "name": "Brazil",
+            "folder": "brazil",
+            "description": "Olá from the lively cats of Brazil! 🇧🇷",
+            "images": [
+                "cat1.jpg",
+                "cat2.jpg"
+            ]
+        }
+    ]
+}
